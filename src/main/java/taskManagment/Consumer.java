@@ -26,7 +26,7 @@ public class Consumer {
         channel.basicConsume(queueName, true, new DeliverCallback() {
                     public void handle(String s, Delivery delivery) throws IOException {
                         String m=new String(delivery.getBody(),"UTF-8");
-                        System.out.println( counter++ +" : received String : "+ m);
+                        System.out.println( counter++ +" : DON received String : "+ m);
                         Runnable worker = new WorkerThread(m);
                         executor.execute(worker);
                     }
@@ -47,7 +47,7 @@ public class Consumer {
         channel.basicConsume(queueName, true, new DeliverCallback() {
                     public void handle(String s, Delivery delivery) throws IOException {
                         String m=new String(delivery.getBody(),"UTF-8");
-                        System.out.println( counter++ +" : received String : "+ m);
+                        System.out.println( counter++ +" : DB received String : "+ m);
                         Runnable worker = new DatabaseWorker(m);
                         executor.execute(worker);
                     }

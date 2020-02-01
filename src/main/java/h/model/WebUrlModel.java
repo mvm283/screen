@@ -1,5 +1,7 @@
 package h.model;
 
+import org.joda.time.DateTime;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -21,7 +23,7 @@ public class WebUrlModel implements Serializable {
     private String url;
 
     @Column(name = "timeStamp")
-    private LocalDateTime timeStamp;
+    private Date timeStamp;
 
     @Column(name = "fileName")
     private String fileName;
@@ -45,11 +47,11 @@ public class WebUrlModel implements Serializable {
         this.url = url;
     }
 
-    public LocalDateTime getTimeStamp() {
+    public Date getTimeStamp() {
         return timeStamp;
     }
 
-    public void setTimeStamp(LocalDateTime timeStamp) {
+    public void setTimeStamp(Date timeStamp) {
         this.timeStamp = timeStamp;
     }
 

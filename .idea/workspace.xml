@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fileUtilitis/FileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utiles/AWSUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/SimpleThreadPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580571312693</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="AWS">
+      <created>1580576182036</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580576182036</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,12 +202,22 @@
     <MESSAGE value="second fucking days:&#10;rabbitMq producer and consumer implemented" />
     <MESSAGE value="database configuration" />
     <MESSAGE value="database consumer completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="database consumer completed" />
+    <MESSAGE value="AWS" />
+    <option name="LAST_COMMIT_MESSAGE" value="AWS" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="r.nextInt(1-300000)" />
+        <watch expression="DateTime().now()" />
       </configuration>
     </watches-manager>
   </component>

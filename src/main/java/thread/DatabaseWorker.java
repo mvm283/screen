@@ -9,14 +9,23 @@ import java.lang.reflect.Type;
 import java.util.concurrent.TimeoutException;
 import static sun.plugin2.util.PojoUtil.*;
 
-public class DatabaseWorker extends  WorkerThread {
-
-    public DatabaseWorker(String s) {
-        super(s);
-
+public class DatabaseWorker implements Runnable {
+    public String message;
+    public DatabaseWorker(String s){
+        this.message=s;
+    }
+    public void run() {
+        System.out.println(Thread.currentThread().getName()+" (Start) message = "+message);
+        try {
+            processmessage();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName()+" (End)");//prints thread name
     }
 
-    @Override
     public void processmessage() throws TimeoutException, IOException {
 
         Gson gson = new Gson();
