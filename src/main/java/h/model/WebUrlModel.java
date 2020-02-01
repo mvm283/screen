@@ -9,7 +9,8 @@ import java.util.Date;
 @Table(name = "web_url_List")
 public class WebUrlModel implements Serializable {
 
-
+    public WebUrlModel() {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +25,8 @@ public class WebUrlModel implements Serializable {
 
     @Column(name = "fileName")
     private String fileName;
+
+
 
 
     public long getId() {

@@ -11,8 +11,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeoutException;
 
-public class WorkerThread implements Runnable {
-    private String message;
+public      class WorkerThread implements Runnable {
+    public String message;
     public WorkerThread(String s){
         this.message=s;
     }
@@ -29,7 +29,7 @@ public class WorkerThread implements Runnable {
     }
 
     private ChromeWebDriver chromeWebDriver=new ChromeWebDriver();
-    private void processmessage() throws TimeoutException, IOException {
+    public   void processmessage() throws TimeoutException, IOException {
 
         chromeWebDriver.captureUrl( message);
         //chromeWebDriver.captureUrl( this.message);

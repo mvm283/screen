@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/ado/IAbstractGenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/ado/IWebUrlDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/ado/Impl/AbstractGenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/ado/Impl/WebUrlDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/manager/IWebUrlManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/manager/ManagerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/manager/impl/WebUrlManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/thread/SimpleThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManagment/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launcher.class" afterDir="false" />
     </list>
@@ -171,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580501540854</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="database configuration">
+      <created>1580566988922</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580566988923</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,32 +181,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second fucking days:&#10;rabbitMq producer and consumer implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="second fucking days:&#10;rabbitMq producer and consumer implemented" />
+    <MESSAGE value="database configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="database configuration" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Launcher.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Launcher.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="r.nextInt(1-300000)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

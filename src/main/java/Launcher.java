@@ -25,27 +25,27 @@ public class Launcher {
 
     public static void main( String[] args ) throws IOException, TimeoutException {
 
+
+
+/*
         WebUrlModel webUrlModel=new WebUrlModel();
         webUrlModel.setFileName("fileName");
         webUrlModel.setUrl("url");
         webUrlModel.setTimeStamp(LocalDateTime.now());
         ManagerFactory.getInstance().getIWebUrlManager().addWebUrl(webUrlModel);
-
+*/
 
 
         Producer producer=new Producer(GlobalConfigs.DOWNLOAD_QUEUE);
-        /*
-        for(int i=0;i<10 ;i++){
-            producer.producer("http://www.google.com");
-        }
-        */
+
         producer.producer("http://www.google.com");
         producer.producer("http://www.yahoo.com");
         producer.producer("http://www.msn.com");
         producer.producer("http://www.varzesh3.com");
 
         Consumer consumer=new Consumer();
-        consumer.consumer();
+        consumer.dounloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
 
 
 
