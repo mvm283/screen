@@ -1,4 +1,7 @@
 
+import configuration.GlobalConfigs;
+import h.manager.ManagerFactory;
+import h.model.WebUrlModel;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +13,9 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import scraper.ChromeWebDriver;
 import taskManagment.Consumer;
 import taskManagment.Producer;
-import thread.WorkerThread;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeoutException;
@@ -22,31 +25,28 @@ public class Launcher {
 
     public static void main( String[] args ) throws IOException, TimeoutException {
 
+        WebUrlModel webUrlModel=new WebUrlModel();
+        webUrlModel.setFileName("fileName");
+        webUrlModel.setUrl("url");
+        webUrlModel.setTimeStamp(LocalDateTime.now());
+        ManagerFactory.getInstance().getIWebUrlManager().addWebUrl(webUrlModel);
 
 
 
-
-        Producer producer=new Producer();
+        Producer producer=new Producer(GlobalConfigs.DOWNLOAD_QUEUE);
+        /*
         for(int i=0;i<10 ;i++){
             producer.producer("http://www.google.com");
         }
+        */
+        producer.producer("http://www.google.com");
+        producer.producer("http://www.yahoo.com");
+        producer.producer("http://www.msn.com");
+        producer.producer("http://www.varzesh3.com");
 
-
-        ExecutorService executor = Executors.newFixedThreadPool(5);//creating a pool of 5 threads
-        for (int i = 0; i < 10; i++) {
-            Runnable worker = new WorkerThread("" + i);
-            executor.execute(worker);//calling execute method of ExecutorService
-        }
-        executor.shutdown();
-        while (!executor.isTerminated()) {   }
-
-        System.out.println("Finished all threads");
-
-
-/*
-    Consumer consumer=new Consumer();
+        Consumer consumer=new Consumer();
         consumer.consumer();
-*/
+
 
 
     }

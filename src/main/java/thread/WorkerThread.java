@@ -1,4 +1,9 @@
 package thread;
+import com.rabbitmq.client.AMQP;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.DefaultConsumer;
+import com.rabbitmq.client.Envelope;
+import scraper.ChromeWebDriver;
 import taskManagment.Consumer;
 
 import java.io.IOException;
@@ -22,10 +27,13 @@ public class WorkerThread implements Runnable {
         }
         System.out.println(Thread.currentThread().getName()+" (End)");//prints thread name
     }
-    private void processmessage() throws TimeoutException, IOException {
-        Consumer consumer=new Consumer();
-        consumer.consumer();
 
+    private ChromeWebDriver chromeWebDriver=new ChromeWebDriver();
+    private void processmessage() throws TimeoutException, IOException {
+
+        chromeWebDriver.captureUrl( message);
+        //chromeWebDriver.captureUrl( this.message);
       //  try {  Thread.sleep(2000);  } catch (InterruptedException e) { e.printStackTrace(); }
     }
 }
+

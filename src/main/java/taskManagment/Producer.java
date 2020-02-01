@@ -9,7 +9,11 @@ import java.util.concurrent.TimeoutException;
 
 public class Producer {
 
-    private String queueName="downloadQueue";
+    private String queueName;
+
+    public Producer(String queueName) {
+        this.queueName = queueName;
+    }
 
     public   void producer(String message) throws TimeoutException, IOException {
         ConnectionFactory  factory=new ConnectionFactory();
