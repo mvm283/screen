@@ -1,23 +1,9 @@
 
 import configuration.GlobalConfigs;
-import h.manager.ManagerFactory;
-import h.model.WebUrlModel;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import scraper.ChromeWebDriver;
-import taskManagment.Consumer;
-import taskManagment.Producer;
+import taskmanagment.Consumer;
+import taskmanagment.Producer;
 
 import java.io.*;
-import java.time.LocalDateTime;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeoutException;
 
 public class Launcher {
@@ -34,11 +20,11 @@ public class Launcher {
         producer.producer("http://www.msn.com");
         producer.producer("http://www.varzesh3.com");
 
-        Consumer consumer=new Consumer();
-        consumer.dounloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        Consumer consumer=new Consumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        //consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
         consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
 
-
+        Consumer consumer1=new Consumer(GlobalConfigs.DOWNLOAD_QUEUE,"stop");
 
     }
 }

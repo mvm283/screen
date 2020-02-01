@@ -1,6 +1,7 @@
-package taskManagment;
+package taskmanagment;
 
 import com.rabbitmq.client.*;
+import configuration.GlobalConfigs;
 import scraper.ChromeWebDriver;
 import thread.DatabaseWorker;
 import thread.WorkerThread;
@@ -14,8 +15,28 @@ public class Consumer {
     private ChromeWebDriver chromeWebDriver=new ChromeWebDriver();
     private long counter=0;
 
+    public Consumer(String queueName) throws TimeoutException, IOException {
+        if(queueName.equals(GlobalConfigs.DATABASE_QUEUE))
+            dbConsumer(queueName);
+        else if(queueName.equals(GlobalConfigs.DOWNLOAD_QUEUE))
+            downloadConsumer(queueName);
 
-    public void dounloadConsumer(String queueName ) throws TimeoutException, IOException {
+
+    }
+    public Consumer(String queueName,String stop) throws TimeoutException, IOException {
+        if(queueName.equals(GlobalConfigs.DATABASE_QUEUE))
+            dbConsumer(queueName);
+        else if(queueName.equals(GlobalConfigs.DOWNLOAD_QUEUE))
+            downloadConsumerStop(queueName);
+
+
+    }
+
+    public Consumer() {
+    }
+
+
+    public void downloadConsumer(String queueName ) throws TimeoutException, IOException {
         ExecutorService executor = Executors.newFixedThreadPool(5);
         ConnectionFactory factory=new ConnectionFactory();
         //factory.setHost("localhost");
@@ -35,6 +56,10 @@ public class Consumer {
                     }
                 }
         );
+    }
+
+    public void downloadConsumerStop(String queueName ) throws TimeoutException, IOException {
+
     }
     public void dbConsumer(String queueName ) throws TimeoutException, IOException {
         ExecutorService executor = Executors.newFixedThreadPool(1);

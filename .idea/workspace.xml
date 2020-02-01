@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/ado/IAbstractGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/dao/IAbstractGenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/ado/IWebUrlDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/dao/IWebUrlDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/ado/Impl/AbstractGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/dao/Impl/AbstractGenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/ado/Impl/WebUrlDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/dao/Impl/WebUrlDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/h/manager/impl/WebUrlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/manager/impl/WebUrlManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launcher.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580576182036</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[Database] db issues have been fixed&#10;timestamp type, table creation">
+      <created>1580579803799</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580579803799</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,15 +216,21 @@
     <MESSAGE value="database configuration" />
     <MESSAGE value="database consumer completed" />
     <MESSAGE value="AWS" />
-    <option name="LAST_COMMIT_MESSAGE" value="AWS" />
+    <MESSAGE value="[Database] db issues have been fixed&#10;timestamp type, table creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Database] db issues have been fixed&#10;timestamp type, table creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/main/java/Launcher.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

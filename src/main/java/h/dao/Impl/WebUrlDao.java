@@ -1,6 +1,6 @@
-package h.ado.Impl;
+package h.dao.Impl;
 
-import h.ado.IWebUrlDao;
+import h.dao.IWebUrlDao;
 import h.model.WebUrlModel;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;

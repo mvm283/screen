@@ -1,4 +1,4 @@
-package h.ado;
+package h.dao;
 
 import java.io.Serializable;
 import java.util.List;

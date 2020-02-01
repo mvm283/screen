@@ -1,6 +1,6 @@
 package h.manager.impl;
 
-import h.ado.IWebUrlDao;
+import h.dao.IWebUrlDao;
 import h.manager.IWebUrlManager;
 import h.model.WebUrlModel;
 import org.springframework.beans.factory.annotation.Autowired;
