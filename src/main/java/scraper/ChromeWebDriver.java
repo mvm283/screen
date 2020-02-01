@@ -1,7 +1,9 @@
 package scraper;
 
+import com.google.common.primitives.Bytes;
 import com.google.gson.Gson;
 import configuration.GlobalConfigs;
+import fileUtilitis.FileRepository;
 import h.manager.ManagerFactory;
 import h.model.WebUrlModel;
 import org.apache.commons.io.FileUtils;
@@ -33,11 +35,11 @@ public class ChromeWebDriver {
         driver.get(url);
 
         String dbFileName= String.valueOf(url.concat(String.valueOf(Math.random())).hashCode());
-        String fileName=GlobalConfigs.FILE_PATH+dbFileName +".jpg";
-
-        File srcFile1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        //FileUtils.copyFile(srcFile1, new File((GlobalConfigs.FILE_PATH+(url.concat(String.valueOf(counter++))).hashCode() +".jpg")), true);
-        FileUtils.copyFile(srcFile1, new File(fileName), true);
+        //File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        //to local storage
+        FileRepository.saveFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE),dbFileName);
+        //to aws s3 storage
+        FileRepository.saveFile( ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64),dbFileName);
 
         WebUrlModel webUrlModel=new WebUrlModel();
         webUrlModel.setFileName(dbFileName);

@@ -140,6 +140,14 @@
             <version>2.8.6</version>
         </dependency>
 
+        <!-- AWS sdk -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.10.46</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>

@@ -27,15 +27,6 @@ public class Launcher {
 
 
 
-/*
-        WebUrlModel webUrlModel=new WebUrlModel();
-        webUrlModel.setFileName("fileName");
-        webUrlModel.setUrl("url");
-        webUrlModel.setTimeStamp(LocalDateTime.now());
-        ManagerFactory.getInstance().getIWebUrlManager().addWebUrl(webUrlModel);
-*/
-
-
         Producer producer=new Producer(GlobalConfigs.DOWNLOAD_QUEUE);
 
         producer.producer("http://www.google.com");

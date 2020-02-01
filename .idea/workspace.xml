@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fileUtilitis/FileRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utiles/AWSUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskManagment/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/SimpleThreadPool.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launcher.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +16,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="206" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,7 +41,7 @@
   <component name="ProjectId" id="1X7G5HoIR1ThrSkzIAOtwEE1dG6" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/utiles" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -48,7 +50,11 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="h.manager.impl" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fileUtilitis" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\uni\screen\screen\src\main\java\utiles" />
       <recent name="D:\uni\screen\screen\src\main\resources" />
       <recent name="D:\uni\screen\screen\src\main\java\ado" />
     </key>
@@ -165,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580566988923</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="database consumer completed">
+      <created>1580571312692</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580571312693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second fucking days:&#10;rabbitMq producer and consumer implemented" />
     <MESSAGE value="database configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="database configuration" />
+    <MESSAGE value="database consumer completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="database consumer completed" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -190,5 +204,8 @@
         <watch expression="r.nextInt(1-300000)" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/screen$Launcher.ic" NAME="Launcher Coverage Results" MODIFIED="1580573721649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
