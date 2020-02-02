@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConsumerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProducerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInterfaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launcher.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +40,7 @@
   <component name="ProjectId" id="1X7G5HoIR1ThrSkzIAOtwEE1dG6" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -62,9 +57,9 @@
       <recent name="fileUtilitis" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\uni\screen\screen\src\main\resources" />
       <recent name="D:\uni\screen\screen\src\test\resources" />
       <recent name="D:\uni\screen\screen\src\main\java\utiles" />
-      <recent name="D:\uni\screen\screen\src\main\resources" />
       <recent name="D:\uni\screen\screen\src\main\java\ado" />
     </key>
   </component>
@@ -80,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserInterfaceTest.produceFromStringTest">
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Launcher" />
       <module name="screenshot" />
@@ -180,10 +175,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserInterfaceTest.produceFromStringTest" />
         <item itemvalue="Application.Launcher" />
-        <item itemvalue="JUnit.UserInterfaceTest.fullRunTest" />
         <item itemvalue="Application.UserInterface" />
+        <item itemvalue="JUnit.UserInterfaceTest.produceFromStringTest" />
+        <item itemvalue="JUnit.UserInterfaceTest.fullRunTest" />
         <item itemvalue="JUnit.ConsumerTest.consumerTest" />
       </list>
     </recent_temporary>
@@ -262,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580643339969</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="bug fix - command for running consumer and producer separatly - running consumer as separated service(to listen)">
+      <created>1580646007788</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580646007789</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,14 +288,15 @@
     <MESSAGE value="[Command] command prompt preparation now is done" />
     <MESSAGE value="[unit test] unit test" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="bug fix - command for running consumer and producer separatly - running consumer as separated service(to listen)" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix - command for running consumer and producer separatly - running consumer as separated service(to listen)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -308,7 +311,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
-          <line>70</line>
+          <line>73</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -328,7 +331,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
-          <line>59</line>
+          <line>62</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -338,7 +341,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>

@@ -1,6 +1,7 @@
 package taskmanagment;
 
 import com.rabbitmq.client.*;
+import com.rabbitmq.client.CancelCallback;
 import configuration.GlobalConfigs;
 import scraper.ChromeWebDriver;
 import thread.DatabaseWorker;
@@ -11,8 +12,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeoutException;
 
+
 public class Consumer {
-    private ChromeWebDriver chromeWebDriver=new ChromeWebDriver();
     private long counter=0;
 
     public Consumer(String queueName) throws TimeoutException, IOException {
@@ -33,6 +34,7 @@ public class Consumer {
     }
 
     public Consumer() {
+        System.out.println("aaaaaa");
     }
 
 
@@ -68,7 +70,7 @@ public class Consumer {
         Connection connection=factory.newConnection();
         Channel channel=connection.createChannel();
         channel.queueDeclare(queueName,false,false,false,null);
-
+        System.out.println("Started Database consumer!!");
         channel.basicConsume(queueName, true, new DeliverCallback() {
                     public void handle(String s, Delivery delivery) throws IOException {
                         String m=new String(delivery.getBody(),"UTF-8");

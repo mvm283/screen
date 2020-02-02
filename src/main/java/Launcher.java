@@ -11,8 +11,10 @@ public class Launcher {
 
 
     public static void main( String[] args ) throws Exception {
+        String[] aa= {"screenshotservice","c"};
+        UserInterface.entryPoint(aa);
 
-        produceFromStringTest();
+        //produceFromStringTest();
 
 
 /*

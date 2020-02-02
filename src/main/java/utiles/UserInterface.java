@@ -5,6 +5,9 @@ import org.apache.commons.lang3.StringUtils;
 import taskmanagment.Consumer;
 import taskmanagment.Producer;
 
+import com.rabbitmq.client.*;
+import com.rabbitmq.client.CancelCallback;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -102,7 +105,8 @@ public class UserInterface {
             }
         }
     }
-    public static void main(String[] args) throws Exception {
+    public static void entryPoint(String[] args) throws Exception {
+
 
         if(args.length!=2) {
             System.out.println("Bad command (e.g screenshotservice c/p)");
@@ -122,9 +126,11 @@ public class UserInterface {
         // java screenshot c
         if("c".equals(args[1]))
         {
-            Consumer consumer = new Consumer(GlobalConfigs.DOWNLOAD_QUEUE);
-            //consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
-            consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
+            Consumer consumer = new Consumer();
+
+             consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+             consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
+            System.out.println("Press CTRL+C to stop Consumers...");
         }else
         if("p".equals(args[1])) {
 
@@ -143,5 +149,15 @@ public class UserInterface {
                 run(line);
             }
         }
+
+    }
+
+    public static void test() throws Exception {
+        Consumer consumer=new Consumer();
+        consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
+
+        String command1="ctl -p -s http://www.msn.com";
+        UserInterface.run(command1);
     }
 }
