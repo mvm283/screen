@@ -1,5 +1,5 @@
 import configuration.GlobalConfigs;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import taskmanagment.Consumer;
 
 import java.io.IOException;
@@ -10,8 +10,8 @@ public class ConsumerTest {
     @Test
     public void consumerTest() throws TimeoutException, IOException {
         Consumer consumer=new Consumer();
-        consumer.downloadConsumer(GlobalConfigs.DATABASE_QUEUE);
-        consumer.dbConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
 
     }
 

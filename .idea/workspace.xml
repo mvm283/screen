@@ -3,19 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/dao/IAbstractGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/dao/IAbstractGenericDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/dao/IWebUrlDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/dao/IWebUrlDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/dao/Impl/AbstractGenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/dao/Impl/AbstractGenericDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/dao/Impl/WebUrlDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/dao/Impl/WebUrlDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/manager/IWebUrlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/manager/IWebUrlManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/manager/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/manager/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/manager/impl/WebUrlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/manager/impl/WebUrlManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/h/model/WebUrlModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/model/WebUrlModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scraper/PhantomJsDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/PhantomJsDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-dataSource.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-hibernate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ConsumerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProducerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProducerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInterfaceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserInterfaceTest.fullRunTest">
+  <component name="RunManager" selected="JUnit.UserInterfaceTest.produceFromStringTest">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Launcher" />
       <module name="screenshot" />
@@ -114,21 +111,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProducerTest.producerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="screenshot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProducerTest" />
-      <option name="METHOD_NAME" value="producerTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserInterfaceTest.fullRunTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="screenshot" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserInterfaceTest" />
       <option name="METHOD_NAME" value="fullRunTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserInterfaceTest.produceFromStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="screenshot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserInterfaceTest" />
+      <option name="METHOD_NAME" value="produceFromStringTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserInterfaceTest.produceFromStringTest" />
+        <item itemvalue="Application.Launcher" />
         <item itemvalue="JUnit.UserInterfaceTest.fullRunTest" />
         <item itemvalue="Application.UserInterface" />
         <item itemvalue="JUnit.ConsumerTest.consumerTest" />
-        <item itemvalue="JUnit.ProducerTest.producerTest" />
-        <item itemvalue="Application.Launcher" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580642321241</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bug fix">
+      <created>1580643339969</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580643339969</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,7 +285,8 @@
     <MESSAGE value="[Command] command prompt preparation" />
     <MESSAGE value="[Command] command prompt preparation now is done" />
     <MESSAGE value="[unit test] unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="[unit test] unit test" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -322,9 +327,19 @@
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/UserInterfaceTest.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="47" />
+          <line>36</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -43,8 +43,8 @@ public class Consumer {
         Connection connection=factory.newConnection();
         Channel channel=connection.createChannel();
         channel.queueDeclare(queueName,false,false,false,null);
-
-        channel.basicConsume(queueName, true, new DeliverCallback() {
+        System.out.println("Started Download consumer!!");
+                channel.basicConsume(queueName, true, new DeliverCallback() {
                     public void handle(String s, Delivery delivery) throws IOException {
                         String m=new String(delivery.getBody(),"UTF-8");
                         System.out.println( counter++ +" : DON received String : "+ m);

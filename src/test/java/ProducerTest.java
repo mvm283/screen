@@ -1,5 +1,5 @@
 import configuration.GlobalConfigs;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import taskmanagment.Consumer;
 import taskmanagment.Producer;
 

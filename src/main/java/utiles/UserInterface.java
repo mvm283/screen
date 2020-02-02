@@ -93,33 +93,55 @@ public class UserInterface {
                 if(checkArguments(args1))
                     commandControl(args1);
                 else
-                    System.out.println("Bad command (e.i ctl -p/-q -f/-s filename)");
+                    System.out.println("Bad command (e.g ctl -p/-q -f/-s filename)");
                 System.out.print("-->");
             }else
             {
-                System.out.println("Bad command (e.i ctl -p/-q -f/-s filename)");
+                System.out.println("Bad command (e.g ctl -p/-q -f/-s filename)");
                 System.out.print("-->");
             }
         }
     }
     public static void main(String[] args) throws Exception {
 
-        Consumer consumer=new Consumer(GlobalConfigs.DOWNLOAD_QUEUE);
-        //consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
-        consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
+        if(args.length!=2) {
+            System.out.println("Bad command (e.g screenshotservice c/p)");
+            return;
+        }else
+        if(!"screenshotservice".equals(args[0])){
+            System.out.println("Bad command (e.g screenshotservice c/p)");
+            return;
+        }
+        if(!("c".equals(args[1]) || "p".equals(args[1]))){
+            System.out.println("Bad command (e.g screenshotservice c/p)");
+            return;
+        }
 
 
-        System.out.print("-->");
-        Scanner sc = new Scanner(System.in);
 
-        while(sc.hasNextLine()) {
+        // java screenshot c
+        if("c".equals(args[1]))
+        {
+            Consumer consumer = new Consumer(GlobalConfigs.DOWNLOAD_QUEUE);
+            //consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+            consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
+        }else
+        if("p".equals(args[1])) {
 
-            String line = sc.nextLine().replaceAll("(\\r|\\n)", "");
-            // return pressed
-            if (line.length() == 0) {
-                continue;
+            //java sscreenshot p
+
+            System.out.print("-->");
+            Scanner sc = new Scanner(System.in);
+
+            while (sc.hasNextLine()) {
+
+                String line = sc.nextLine().replaceAll("(\\r|\\n)", "");
+                // return pressed
+                if (line.length() == 0) {
+                    continue;
+                }
+                run(line);
             }
-            run(line);
         }
     }
 }

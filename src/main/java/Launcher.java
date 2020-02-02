@@ -2,6 +2,7 @@
 import configuration.GlobalConfigs;
 import taskmanagment.Consumer;
 import taskmanagment.Producer;
+import utiles.UserInterface;
 
 import java.io.*;
 import java.util.concurrent.TimeoutException;
@@ -9,10 +10,12 @@ import java.util.concurrent.TimeoutException;
 public class Launcher {
 
 
-    public static void main( String[] args ) throws IOException, TimeoutException {
+    public static void main( String[] args ) throws Exception {
+
+        produceFromStringTest();
 
 
-
+/*
         Producer producer=new Producer(GlobalConfigs.DOWNLOAD_QUEUE);
 
         producer.producer("http://www.google.com");
@@ -25,6 +28,16 @@ public class Launcher {
         consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
 
         Consumer consumer1=new Consumer(GlobalConfigs.DOWNLOAD_QUEUE,"stop");
+*/
+    }
+
+    public static void produceFromStringTest() throws Exception {
+        Consumer consumer=new Consumer();
+        consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
+        consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
+
+        String command1="ctl -p -s http://www.msn.com";
+        UserInterface.run(command1);
 
     }
 }
