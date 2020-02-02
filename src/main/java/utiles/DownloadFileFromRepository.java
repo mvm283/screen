@@ -1,7 +1,7 @@
 package utiles;
 
 import configuration.GlobalConfigs;
-import fileUtilitis.FileRepository;
+import fileutilitis.FileRepository;
 import database.manager.ManagerFactory;
 import database.model.WebUrlModel;
 

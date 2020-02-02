@@ -12,11 +12,10 @@ import com.amazonaws.services.s3.model.*;
 
 public class AWSUtil {
 
-	private static final String accessKey = "a";
-	private static final String secretKey = "b";
+	private static final String accessKey = "accessKey";
+	private static final String secretKey = "secretKey";
 	private static final String bucketName = "screenShotServiceRepository";
 	private static final String rootPerfixName = "aws";
-	public static final String AWS_S3_URL = "https://kgc0418-tdw-data-0.s3.amazonaws.com/slices/";
 
 
 	public S3Object getObjFromS3(String fileName) {

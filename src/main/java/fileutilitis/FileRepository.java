@@ -1,14 +1,12 @@
-package fileUtilitis;
+package fileutilitis;
 
 import com.amazonaws.AmazonServiceException;
-import com.google.common.primitives.Bytes;
 import configuration.GlobalConfigs;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import utiles.AWSUtil;
 
 import java.io.*;
-import java.net.URL;
 
 public class FileRepository {
 
@@ -35,7 +33,7 @@ public class FileRepository {
         ByteArrayInputStream bytesIn = null;
 
         try {
-            System.out.println(fileName + " - start to write11!");
+            System.out.println(fileName + " - start to write!");
             bytesIn = new ByteArrayInputStream(byteArray);
             aws.putFileIntoS3(bytesIn, fileName);
             System.out.println(fileName + " - saved to aws!");

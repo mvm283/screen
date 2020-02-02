@@ -20,7 +20,7 @@ public class ManagerFactory {
 
     private ManagerFactory() {
     }
-//ManagerFactory.getInstance().getIWebUrlManager().addWebUrl(weburl);
+
     public IWebUrlManager getIWebUrlManager() {
         if (iWebUrlManager == null) {
             iWebUrlManager = (IWebUrlManager) appContext

@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phantomjsdriver.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/manager/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/manager/ManagerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fileUtilitis/FileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileutilitis/FileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanagment/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utiles/AWSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/AWSUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -295,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580680760958</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="checking .gitignore">
+      <created>1580681319534</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1580681319534</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +341,8 @@
     <MESSAGE value="run from Intelij fixed till here" />
     <MESSAGE value="building jar and runing from jar and runing from inteij problems fixed" />
     <MESSAGE value="adding .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding .gitignore" />
+    <MESSAGE value="checking .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="checking .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -336,38 +353,23 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fileUtilitis/FileRepository.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/fileutilitis/FileRepository.java</url>
           <line>60</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
-          <line>73</line>
+          <line>62</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fileUtilitis/FileRepository.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/fileutilitis/FileRepository.java</url>
           <line>59</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
-          <line>62</line>
+          <line>51</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

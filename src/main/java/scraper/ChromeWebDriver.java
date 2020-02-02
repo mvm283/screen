@@ -2,7 +2,7 @@ package scraper;
 
 import com.google.gson.Gson;
 import configuration.GlobalConfigs;
-import fileUtilitis.FileRepository;
+import fileutilitis.FileRepository;
 import database.model.WebUrlModel;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -20,8 +20,6 @@ import java.util.concurrent.TimeoutException;
 
 public class ChromeWebDriver {
 
-    private long counter=0;
-    //private WebDriver driver = new ChromeDriver();
     public void captureUrl(String url) throws IOException, TimeoutException {
 
         DesiredCapabilities des=new DesiredCapabilities();

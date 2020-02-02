@@ -13,7 +13,7 @@ public class DatabaseWorker implements Runnable {
         this.message=s;
     }
     public void run() {
-        System.out.println(Thread.currentThread().getName()+" (Start) message = "+message);
+        //System.out.println(Thread.currentThread().getName()+" (Start) message = "+message);
         try {
             processmessage();
         } catch (TimeoutException e) {
@@ -21,7 +21,7 @@ public class DatabaseWorker implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(Thread.currentThread().getName()+" (End)");//prints thread name
+       // System.out.println(Thread.currentThread().getName()+" (End)");//prints thread name
     }
 
     public void processmessage() throws TimeoutException, IOException {

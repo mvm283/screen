@@ -24,7 +24,7 @@ public class Producer {
 
             channel.basicPublish("",queueName,false,null,message.getBytes());
 
-            System.out.println("message sent!!");
+            System.out.println("url capture request sent!! > "+ message);
 
 
     }
