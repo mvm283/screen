@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 import utiles.AWSUtil;
 
 import java.io.*;
+import java.net.URL;
 
 public class FileRepository {
 
@@ -26,7 +27,7 @@ public class FileRepository {
 
     }
     public static void saveFileToLocalStorage(File srcfile,String fileName) throws IOException {
-        FileUtils.copyFile(srcfile, new File(fileName), true);
+        FileUtils.copyFile(srcfile, new File(fileName), false);
     }
     public static void saveFileToAwsStorage(String srcFile,String fileName) throws IOException {
 
@@ -50,6 +51,18 @@ public class FileRepository {
             }
         }
     }
+
+    public static void downloadFileFromAwsStorage(String fileName,String savingPath) throws IOException {
+        aws.downloadFileFromS3(fileName,savingPath);
+
+    }
+    public static void downloadFileFromLocalStorage(String fileName,String savingPath) throws IOException {
+       File srcfile=new File(GlobalConfigs.FILE_PATH.concat(fileName).concat(FILE_EXTENTION));
+        FileUtils.copyFile(srcfile, new File(savingPath.concat("/").concat(fileName).concat(FILE_EXTENTION)), false);
+    }
+
+
+
 
 
 }

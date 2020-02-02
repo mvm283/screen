@@ -1,24 +1,14 @@
 package utiles;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
+import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.CopyObjectRequest;
-import com.amazonaws.services.s3.model.CopyObjectResult;
-import com.amazonaws.services.s3.model.DeleteObjectRequest;
-import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.s3.model.ListObjectsRequest;
-import com.amazonaws.services.s3.model.ObjectListing;
-import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.services.s3.model.S3ObjectSummary;
- 
+import com.amazonaws.services.s3.model.*;
+
 
 public class AWSUtil {
 
@@ -26,10 +16,12 @@ public class AWSUtil {
 	private static final String secretKey = "b";
 	private static final String bucketName = "screenShotServiceRepository";
 	private static final String rootPerfixName = "aws";
-	public S3Object getFileFromS3(String fileName) {
+	public static final String AWS_S3_URL = "https://kgc0418-tdw-data-0.s3.amazonaws.com/slices/";
+
+
+	public S3Object getObjFromS3(String fileName) {
 
 		try {
-
 			// check data existence
 			if (fileName != null && !fileName.isEmpty()) {
 				fileName = rootPerfixName + fileName;
@@ -48,6 +40,29 @@ public class AWSUtil {
 		}
 
 		return null;
+	}
+
+	public void downloadFileFromS3(String fileName,String savingPath){
+		try {
+			S3Object o=	getObjFromS3( fileName);
+			S3ObjectInputStream s3is = o.getObjectContent();
+			FileOutputStream fos = new FileOutputStream(new File(savingPath.concat("/").concat(fileName)));
+			byte[] read_buf = new byte[1024];
+			int read_len = 0;
+			while ((read_len = s3is.read(read_buf)) > 0) {
+				fos.write(read_buf, 0, read_len);
+			}
+			s3is.close();
+			fos.close();
+		} catch (AmazonServiceException e) {
+			System.err.println(e.getErrorMessage());
+		} catch (FileNotFoundException e) {
+			System.err.println(e.getMessage());
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+
+
 	}
 
 	public void putFileIntoS3(ByteArrayInputStream bytesIn, String fileName) {
