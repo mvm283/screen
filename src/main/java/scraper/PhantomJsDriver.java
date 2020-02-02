@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.springframework.util.ResourceUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class PhantomJsDriver {
 
         DesiredCapabilities des=new DesiredCapabilities();
         des.setJavascriptEnabled(true);
-        System.setProperty("phantomjs.binary.path", "D:\\uni\\screenshot\\phantomjs\\bin\\phantomjs.exe");
+        System.setProperty("phantomjs.binary.path", ResourceUtils.getFile(GlobalConfigs.PHANTOMJS_DRIVER).getAbsolutePath());
 
         WebDriver wd=new PhantomJSDriver();
         wd.get(url);

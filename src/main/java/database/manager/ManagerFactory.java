@@ -1,4 +1,4 @@
-package h.manager;
+package database.manager;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

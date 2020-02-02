@@ -1,13 +1,11 @@
 package thread;
 
 import com.google.gson.Gson;
-import h.manager.ManagerFactory;
-import h.model.WebUrlModel;
+import database.manager.ManagerFactory;
+import database.model.WebUrlModel;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.concurrent.TimeoutException;
-import static sun.plugin2.util.PojoUtil.*;
 
 public class DatabaseWorker implements Runnable {
     public String message;

@@ -1,6 +1,6 @@
-package h.manager;
+package database.manager;
 
-import h.model.WebUrlModel;
+import database.model.WebUrlModel;
 
 public interface IWebUrlManager {
     WebUrlModel addWebUrl(WebUrlModel webUrlModel);

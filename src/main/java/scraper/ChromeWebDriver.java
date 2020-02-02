@@ -3,7 +3,7 @@ package scraper;
 import com.google.gson.Gson;
 import configuration.GlobalConfigs;
 import fileUtilitis.FileRepository;
-import h.model.WebUrlModel;
+import database.model.WebUrlModel;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.openqa.selenium.OutputType;
@@ -11,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.springframework.util.ResourceUtils;
 import taskmanagment.Producer;
 
 import java.io.IOException;
@@ -25,7 +26,9 @@ public class ChromeWebDriver {
 
         DesiredCapabilities des=new DesiredCapabilities();
         des.setJavascriptEnabled(true);
-        System.setProperty("webdriver.chrome.driver", "D:\\uni\\screenshot\\tools\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "D:\\uni\\screenshot\\tools\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ResourceUtils.getFile(GlobalConfigs.CHROOME_DRIVER).getAbsolutePath()
+               );
 
         WebDriver driver = new ChromeDriver();
         driver.get(url);

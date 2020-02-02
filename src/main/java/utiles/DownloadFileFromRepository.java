@@ -2,8 +2,8 @@ package utiles;
 
 import configuration.GlobalConfigs;
 import fileUtilitis.FileRepository;
-import h.manager.ManagerFactory;
-import h.model.WebUrlModel;
+import database.manager.ManagerFactory;
+import database.model.WebUrlModel;
 
 import java.io.IOException;
 

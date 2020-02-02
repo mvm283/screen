@@ -1,7 +1,7 @@
-package h.dao.Impl;
+package database.dao.Impl;
 
-import h.dao.IWebUrlDao;
-import h.model.WebUrlModel;
+import database.dao.IWebUrlDao;
+import database.model.WebUrlModel;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;

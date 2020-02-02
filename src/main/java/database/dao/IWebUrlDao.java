@@ -1,6 +1,6 @@
-package h.dao;
+package database.dao;
 
-import h.model.WebUrlModel;
+import database.model.WebUrlModel;
 
 import java.io.Serializable;
 

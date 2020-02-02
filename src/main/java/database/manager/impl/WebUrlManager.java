@@ -1,8 +1,8 @@
-package h.manager.impl;
+package database.manager.impl;
 
-import h.dao.IWebUrlDao;
-import h.manager.IWebUrlManager;
-import h.model.WebUrlModel;
+import database.dao.IWebUrlDao;
+import database.manager.IWebUrlManager;
+import database.model.WebUrlModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package h.dao.Impl;
+package database.dao.Impl;
 
-import h.dao.IAbstractGenericDAO;
+import database.dao.IAbstractGenericDAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
