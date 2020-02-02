@@ -34,7 +34,6 @@ public class Consumer {
     }
 
     public Consumer() {
-        System.out.println("aaaaaa");
     }
 
 

@@ -133,7 +133,7 @@ public class UserInterface {
             System.out.println("Press CTRL+C to stop Consumers...");
         }else
         if("p".equals(args[1])) {
-
+            System.out.println("Hi, Welcome to ScreenShot application. Here you can run your requests.");
             //java sscreenshot p
 
             System.out.print("-->");
