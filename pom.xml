@@ -7,7 +7,7 @@
     <groupId>com.detectify</groupId>
     <artifactId>screenshot</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
 
     <properties>
         <spring.version>4.2.0.RELEASE</spring.version>
@@ -157,82 +157,81 @@
         </dependency>
     </dependencies>
 
-      <build>
-          <finalName>screenshot</finalName>
-          <resources>
-              <resource>
-                  <directory>src/main/resources</directory>
-                  <filtering>true</filtering>
-                  <includes>
-                      <include>**/*.properties</include>
-                  </includes>
-                  <excludes>
-                      <exclude>**/ehcache.xml</exclude>
-                      <exclude>**/hibernate.cfg.xml</exclude>
-                      <exclude>**/applicationContext*.xml</exclude>
-                      <exclude>META-INF/*</exclude>
-                  </excludes>
-              </resource>
-              <resource>
-                  <directory>src/main/resources</directory>
-                  <includes>
-                      <include>**/ehcache.xml</include>
-                      <include>**/hibernate.cfg.xml</include>
-                      <include>**/applicationContext*.xml</include>
-                      <include>META-INF/*</include>
-                  </includes>
-                  <excludes>
-                      <exclude>**/*.properties</exclude>
-                  </excludes>
-              </resource>
-          </resources>
 
 
-          <plugins>
-              <plugin>
-                  <artifactId>maven-assembly-plugin</artifactId>
-                  <executions>
-                      <execution>
-                          <phase>package</phase>
-                          <goals>
-                              <goal>single</goal>
-                          </goals>
-                      </execution>
-                  </executions>
-                  <configuration>
-                      <archive>
-                      <manifest>
-                          <addClasspath>true</addClasspath>
-                          <classpathPrefix>lib/</classpathPrefix>
-                          <mainClass>Launcher</mainClass>
-                      </manifest>
-                  </archive>
-                      <descriptorRefs>
-                          <descriptorRef>jar-with-dependencies</descriptorRef>
-                      </descriptorRefs>
-                  </configuration>
-              </plugin>
-              <plugin>
-                  <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-compiler-plugin</artifactId>
-                  <configuration>
-                      <source>8</source>
-                      <target>8</target>
-                  </configuration>
-              </plugin>
+    <build>
+        <finalName>screenshot</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+                <excludes>
+                    <exclude>**/ehcache.xml</exclude>
+                    <exclude>**/hibernate.cfg.xml</exclude>
+                    <exclude>**/applicationContext*.xml</exclude>
+                    <exclude>META-INF/*</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/ehcache.xml</include>
+                    <include>**/hibernate.cfg.xml</include>
+                    <include>**/applicationContext*.xml</include>
+                    <include>META-INF/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.properties</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
+                        <index>true</index>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>Launcher</mainClass>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>Launcher</mainClass>
+                                </transformer>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <resource>META-INF/spring.handlers</resource>
+                                </transformer>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <resource>META-INF/spring.schemas</resource>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
 
 </project>

@@ -38,7 +38,7 @@ public class Consumer {
 
 
     public void downloadConsumer(String queueName ) throws TimeoutException, IOException {
-        ExecutorService executor = Executors.newFixedThreadPool(5);
+        final ExecutorService executor = Executors.newFixedThreadPool(5);
         ConnectionFactory factory=new ConnectionFactory();
         //factory.setHost("localhost");
         Connection connection=factory.newConnection();
@@ -63,7 +63,7 @@ public class Consumer {
 
     }
     public void dbConsumer(String queueName ) throws TimeoutException, IOException {
-        ExecutorService executor = Executors.newFixedThreadPool(1);
+       final ExecutorService executor = Executors.newFixedThreadPool(1);
         ConnectionFactory factory=new ConnectionFactory();
         //factory.setHost("localhost");
         Connection connection=factory.newConnection();
