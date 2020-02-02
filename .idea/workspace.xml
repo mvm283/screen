@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utiles/urlChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/manager/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/manager/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fileUtilitis/FileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fileutilitis/FileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scraper/ChromeWebDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configuration/GlobalConfigs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taskmanagment/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanagment/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/DatabaseWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thread/WorkerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utiles/AWSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/AWSUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utiles/UserInterface.java" afterDir="false" />
     </list>
@@ -311,8 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580681319534</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="cleanup messages and classes">
+      <created>1580682567742</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1580682567742</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="Dockerfile" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -342,7 +348,8 @@
     <MESSAGE value="building jar and runing from jar and runing from inteij problems fixed" />
     <MESSAGE value="adding .gitignore" />
     <MESSAGE value="checking .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="checking .gitignore" />
+    <MESSAGE value="cleanup messages and classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup messages and classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -359,7 +366,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
-          <line>62</line>
+          <line>67</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -369,7 +376,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utiles/UserInterface.java</url>
-          <line>51</line>
+          <line>56</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -381,6 +388,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/taskmanagment/Consumer.java</url>
           <line>46</line>
           <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Launcher.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utiles/DownloadFileFromRepository.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

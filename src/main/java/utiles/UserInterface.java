@@ -46,7 +46,12 @@ public class UserInterface {
             if ("-f".equals(args[2])) {//read file
                 for (String url : fileHandler(args[3])) {
                     //check it is a valid url
-                    producer.producer(url.replaceAll("(\\r|\\n)", ""));
+                   url= url.replaceAll("(\\r|\\n)","");
+                    if (!urlChecker.IsMatch(url, GlobalConfigs.URL_REGEX)) {
+                        System.out.println("url is not correct");
+                        return;
+                    }
+                    producer.producer(url);
                 }
             } else if ("-s".equals(args[2])) {//read from string
                 List<String> urls = Arrays.asList(args[3].split(";"));
