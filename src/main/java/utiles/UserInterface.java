@@ -67,7 +67,8 @@ public class UserInterface {
         if ("-q".equals(args[1])) {
             if ("-f".equals(args[2])) {//read file
                 for (String url : fileHandler(args[3])) {
-                    DownloadFileFromRepository.getFile(url,args[4]);
+
+                    DownloadFileFromRepository.getFile(url.replaceAll("(\\r|\\n)", ""),args[4]);
                 }
             } else if ("-s".equals(args[2])) {//read from string
                 List<String> urls = Arrays.asList(args[3].split(";"));
@@ -79,6 +80,28 @@ public class UserInterface {
 
     }
 
+    public static void run(String line) throws Exception {
+        // split line into arguments
+        String[] args1 = line.split(" ");
+
+        // process arguments
+        if (args1.length > 0) {
+            if (args1[0].equalsIgnoreCase("q")) {
+                System.out.println("exiting");
+                System.exit(0);
+            } else if (args1[0].equalsIgnoreCase("ctl")) {
+                if(checkArguments(args1))
+                    commandControl(args1);
+                else
+                    System.out.println("Bad command (e.i ctl -p/-q -f/-s filename)");
+                System.out.print("-->");
+            }else
+            {
+                System.out.println("Bad command (e.i ctl -p/-q -f/-s filename)");
+                System.out.print("-->");
+            }
+        }
+    }
     public static void main(String[] args) throws Exception {
 
         Consumer consumer=new Consumer(GlobalConfigs.DOWNLOAD_QUEUE);
@@ -92,103 +115,11 @@ public class UserInterface {
         while(sc.hasNextLine()) {
 
             String line = sc.nextLine().replaceAll("(\\r|\\n)", "");
-            line="ctl -q -s http://www.msn.com d:/ ";
             // return pressed
             if (line.length() == 0) {
                 continue;
             }
-
-            // split line into arguments
-            String[] args1 = line.split(" ");
-
-            // process arguments
-            if (args1.length > 0) {
-                if (args1[0].equalsIgnoreCase("q")) {
-                    System.out.println("exiting");
-                    System.exit(0);
-                } else if (args1[0].equalsIgnoreCase("ctl")) {
-                     if(checkArguments(args1))
-                    commandControl(args1);
-                    else
-                        System.out.println("Bad command (e.i ctl -p/-q -f/-s filename)");
-                    System.out.print("-->");
-                }else
-                {
-                    System.out.println("Bad command (e.i ctl -p/-q -f/-s filename)");
-                    System.out.print("-->");
-                }
-            }
+            run(line);
         }
-
-
-
-
-
-
-/*
-screenshot servicectl -c  download start/stop
-screenshot servicectl -c  db start/stop
-
-screenshot loadctl -f fileLocation
-screenshot loadctl -s "url1;ur2;.."
-
-screenshot readctl -f fileLocation
-screenshot readctl -s "url1;ur2;.."
-*/
-/*
-        Producer producer=new Producer(GlobalConfigs.DOWNLOAD_QUEUE);
-
-        if (args.length == 4) {
-            if ("servicectl".equals(args[0])) {
-                if ("-c".equals(args[1])) {
-                    if (GlobalConfigs.DOWNLOAD_QUEUE.equals(args[2])
-                            || GlobalConfigs.DOWNLOAD_QUEUE.equals(args[2])) {
-                        if ("start".equals(args[2])) {
-                            Consumer consumer = new Consumer(args[2].toString());
-                        } else if ("stop".equals(args[2])) {
-                            Consumer consumer = new Consumer(args[2].toString(), "stop");
-                        }
-                    }
-
-                } else if ("-p".equals(args[1])) {
-//producer
-                }
-
-            } else if ("loadctl".equals(args[0])) {
-                if ("-f".equals(args[1])) {
-//read file
-                    if (args[2]==null && args[2].isEmpty())
-                    {
-                        System.out.println("Please enter a valid file");
-                    }
-                    File urlFile=new File(args[2]);
-                    List<String> urls= Arrays.asList(args[2].split(";"));
-                    for (String url:urls  ) {
-                        producer.producer(url);
-                    }
-                } else if ("-s".equals(args[1])) {
-//read from string
-                    List<String> urls= Arrays.asList(args[2].split(";"));
-                    for (String url:urls  ) {
-                        producer.producer(url);
-                    }
-
-
-                }
-            } else if ("readctl".equals(args[0])) {
-                if ("-f".equals(args[1])) {
-//download from aws s3 basec file
-                } else if ("-s".equals(args[1])) {
-//download from aws s3 basec string
-                }
-            } else
-            {
-                //check command please
-            }
-        }
-
-*/
     }
-
-
 }

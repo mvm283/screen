@@ -31,11 +31,11 @@ public class ChromeWebDriver {
         driver.get(url);
 
         String dbFileName= String.valueOf(url.concat(String.valueOf(Math.random())).hashCode());
-        //File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        //to local storage
-        FileRepository.saveFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE),dbFileName);
-        //to aws s3 storage
-        //FileRepository.saveFile( ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64),dbFileName);
+
+        if("aws".equals(GlobalConfigs.DOWNLOAD_FROM_STORAGE))
+            FileRepository.saveFile( ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64),dbFileName);
+        else  if("local".equals(GlobalConfigs.DOWNLOAD_FROM_STORAGE))
+             FileRepository.saveFile(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE),dbFileName);
 
         WebUrlModel webUrlModel=new WebUrlModel();
         webUrlModel.setFileName(dbFileName);
