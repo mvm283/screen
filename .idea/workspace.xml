@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f959433b-3fb3-4bb4-ab87-e44644836518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phantomjsdriver.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/launcher.class" beforeDir="false" />
     </list>
-
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580679318823</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="adding .gitignore">
+      <created>1580680760958</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580680760958</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,7 +324,8 @@
     <MESSAGE value="jar file creation with all dependencies" />
     <MESSAGE value="run from Intelij fixed till here" />
     <MESSAGE value="building jar and runing from jar and runing from inteij problems fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="building jar and runing from jar and runing from inteij problems fixed" />
+    <MESSAGE value="adding .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding .gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
