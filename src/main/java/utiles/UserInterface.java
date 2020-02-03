@@ -28,15 +28,20 @@ public class UserInterface {
     }
 
     private static boolean checkArguments(String[] args1) {
-        if (args1.length>=4)
-        if ("-p".equals(args1[1]) || "-q".equals(args1[1]))
-            if (("-s".equals(args1[2]) && args1[3].length()>0)
-                  ||  ("-f".equals(args1[2])  &&  args1[3].length()>0 && fileExists(args1[3])))
+        if (args1.length == 4) {
+            if (args1[1] != null && "-p".equals(args1[1]))
+                if ((args1[2] != null && "-s".equals(args1[2]) && args1[3] != null && args1[3].length() > 0)
+                        || (args1[2] != null && "-f".equals(args1[2]) && args1[3] != null && args1[3].length() > 0 && fileExists(args1[3])))
                     return true;
-    return false;
-
-
-
+        }else
+        if (args1.length == 5){
+            if (args1[1]!=null && "-q".equals(args1[1]))
+                if ((args1[2]!=null && "-s".equals(args1[2]) && args1[3].length() > 0)
+                        || (args1[2]!=null && "-f".equals(args1[2]) && args1[3]!=null &&  args1[3].length() > 0 && fileExists(args1[3])))
+                    if (args1[4]!=null && args1[4].length() > 0 && (new File(args1[4]).exists()))
+                        return true;
+        }
+        return false;
     }
 
     public static void commandControl(String[] args) throws Exception {

@@ -14,12 +14,12 @@ public class Launcher {
     public static void main( String[] args ) throws Exception {
 
         //run from os comand Terminal
-        UserInterface.entryPoint(args);
+        //UserInterface.entryPoint(args);
 
         //test run from Intelij
         //UserInterface.runFromIntelij();
 
-        //produceFromStringTest();
+        produceFromStringTest();
 
     }
 
@@ -28,7 +28,8 @@ public class Launcher {
         consumer.downloadConsumer(GlobalConfigs.DOWNLOAD_QUEUE);
         consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
 
-        String command1="ctl -p -s http://msn.com";
+        //String command1="ctl -p -s http://msn.com";
+        String command1="ctl -q -s http://msn.com";
         UserInterface.run(command1);
 
     }
