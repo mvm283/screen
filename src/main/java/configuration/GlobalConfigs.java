@@ -2,7 +2,7 @@ package configuration;
 
 public   class GlobalConfigs {
 
-    public static final String FILE_PATH="D:\\shoooots\\";
+    public static final String FILE_PATH="D:\\screenshots\\";
     public static final String DOWNLOAD_FROM_STORAGE="local";//or aws
     public static final String DOWNLOAD_QUEUE="downloadQueue";
     public static final String DATABASE_QUEUE="databaseQueue";
