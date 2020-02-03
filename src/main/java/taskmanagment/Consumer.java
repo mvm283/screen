@@ -6,6 +6,7 @@ import configuration.GlobalConfigs;
 import scraper.ChromeWebDriver;
 import thread.DatabaseWorker;
 import thread.WorkerThread;
+import utiles.RabitMqConnectionFactory;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
@@ -39,7 +40,8 @@ public class Consumer {
 
     public void downloadConsumer(String queueName ) throws TimeoutException, IOException {
         final ExecutorService executor = Executors.newFixedThreadPool(5);
-        ConnectionFactory factory=new ConnectionFactory();
+        ConnectionFactory factory= RabitMqConnectionFactory.rabitMqConnectionFactory();
+
         //factory.setHost("localhost");
         Connection connection=factory.newConnection();
         Channel channel=connection.createChannel();
@@ -64,7 +66,7 @@ public class Consumer {
     }
     public void dbConsumer(String queueName ) throws TimeoutException, IOException {
        final ExecutorService executor = Executors.newFixedThreadPool(1);
-        ConnectionFactory factory=new ConnectionFactory();
+        ConnectionFactory factory=RabitMqConnectionFactory.rabitMqConnectionFactory();
         //factory.setHost("localhost");
         Connection connection=factory.newConnection();
         Channel channel=connection.createChannel();

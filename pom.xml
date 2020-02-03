@@ -197,6 +197,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <mainClass>Launcher</mainClass>
                         </manifest>
                         <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>

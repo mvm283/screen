@@ -1,0 +1,40 @@
+version: '3.4'
+
+services:
+  rabbit-sender:
+    image: rabbit-sender
+    container_name: rabbit-sender
+    build:
+      context: ../SenderRabitMQ
+      dockerfile: debug.Dockerfile
+    env_file: common.env
+    networks:
+      - rabbitPoc
+    expose:
+      - "80"
+
+  rabbit-receiver:
+    image: rabbit-receiver
+    container_name: rabbit-receiver
+    build:
+      context: ../ReceiveRabitMQ
+      dockerfile: debug.Dockerfile
+    env_file: common.env
+    networks:
+      - rabbitPoc
+    expose:
+      - "80"
+
+  rabbitmq:
+    image: rabbitmq:3.7.15
+    hostname: rabbitmq
+    build:
+      context: rabbit
+      dockerfile: debug.Dockerfile
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - rabbitPoc
+    volumes:
+      - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
