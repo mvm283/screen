@@ -14,12 +14,12 @@ public class Launcher {
     public static void main( String[] args ) throws Exception {
 
         //run from os comand Terminal
-        //UserInterface.entryPoint(args);
+        UserInterface.entryPoint(args);
 
         //test run from Intelij
         //UserInterface.runFromIntelij();
 
-        produceFromStringTest();
+        //produceFromStringTest();
 
     }
 
