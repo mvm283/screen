@@ -29,7 +29,7 @@ public class Launcher {
         consumer.dbConsumer(GlobalConfigs.DATABASE_QUEUE);
 
         //String command1="ctl -p -s http://msn.com";
-        String command1="ctl -q -s http://msn.com";
+        String command1="ctl -q -s d:/aa.txt  d:/";
         UserInterface.run(command1);
 
     }
