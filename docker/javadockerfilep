@@ -1,0 +1,5 @@
+FROM openjdk
+ADD target/screenshot.jar /root/
+ADD tools/chromedriver.exe /root/
+CMD ["java","-jar","/root/screenshot.jar","screenshotservice","p"]
+EXPOSE 5672

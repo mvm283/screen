@@ -1,0 +1,3 @@
+FROM rabbitmq
+MAINTAINER mohammad Vesaghati
+RUN rabbitmq-plugins enable rabbitmq_management

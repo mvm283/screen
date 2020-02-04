@@ -1,0 +1,39 @@
+//dockerfile rabbit
+//Filename: javadockerfileRabbit
+FROM rabbitmq
+MAINTAINER mohammad Vesaghati
+RUN rabbitmq-plugins enable rabbitmq_management
+ 
+----------------
+//docker file java producer
+//Filename: javadockerfilep
+FROM openjdk
+ADD target/screenshot.jar /root/
+ADD tools/chromedriver.exe /root/
+CMD ["java","-jar","/root/screenshot.jar","screenshotservice","p"]
+EXPOSE 5672
+
+---------------
+//docker file java consumer
+//Filename: javadockerfilec
+FROM openjdk
+ADD target/screenshot.jar /root/
+ADD tools/chromedriver.exe /root/
+CMD ["java","-jar","/root/screenshot.jar","screenshotservice","c"]
+EXPOSE 5672
+
+=====================================
+//build
+
+docker build -f docker/javadockerfilec -t javac .
+docker build -f docker/javadockerfilep -t javap .
+//docker build -f docker/javadockerfileRabbit -t rabbitservice .
+
+//run containers
+docker network create myapp_net
+docker run -d --network myapp_net --hostname rabbitmqhost --name rabbitmqscreenshot -p 15672:15672 -p 5672:5672 rabbitmq
+
+docker run -d --network myapp_net --hostname javapserver  javac
+docker run --network myapp_net --hostname javapserver  javap
+
+ 
